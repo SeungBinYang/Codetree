@@ -1,13 +1,5 @@
 a,b,c = map(int,input().split())
 
-if a>b:
-    if b>c:
-        if a>c: print(b)
-        else: print(a)
-    elif a>c: print(c)
-    else: print(a)
-elif b>c:
-    if a>c: print(c)
-    else: print(a)
-else: print(b)
-        
+if (a>b and b>c) or (c>b and b>a): print(b)
+elif (b>a and a>c) or (c>a and a>b): print(a)
+else: print(c)
